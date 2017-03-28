@@ -1245,6 +1245,16 @@ class analyzer {
    void reset_offset();
 };
 
+class summarizer {
+  public: 
+  summarizer(const std::wstring &);
+  ~summarizer();
+
+  std::list<const sentence*> summarize(const document &, int) const;
+  std::list<std::wstring> summarize_ids(const document &, int) const;
+
+};
+
 
 /*------------------------------------------------------------------------*/
 class traces {

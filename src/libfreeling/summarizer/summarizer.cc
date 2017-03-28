@@ -490,10 +490,19 @@ namespace freeling {
           n += s->size();
           done = (n>=num_words);
         }
-      }          
+      }
     }
 
     return (res);
+  }
+
+  list<wstring> summarizer::summarize_ids(const document &doc, int num_words) const {
+    list<wstring> result;
+    list<const sentence*> selected_sentences = summarize(doc, num_words);
+    for (list<const sentence*>::const_iterator s=selected_sentences.begin(); s!=selected_sentences.end(); s++) {
+      result.push_back((*s)->get_sentence_id());
+    }
+    return result;
   }
 
 

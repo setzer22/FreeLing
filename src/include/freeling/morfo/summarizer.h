@@ -52,6 +52,9 @@ namespace freeling {
     std::list<const freeling::sentence*> summarize(const freeling::document &doc,
                                                    int num_words) const;
 
+    std::list<std::wstring> summarize_ids(const freeling::document &doc,
+                                                   int num_words) const;
+
     typedef enum {FIRST_WORD,FIRST_MOST_WEIGHT,WEIGHT_SUM} Heuristics;
 
   private:

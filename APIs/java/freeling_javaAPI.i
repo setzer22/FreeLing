@@ -39,6 +39,7 @@
  #include "freeling/io.h"
  #include "freeling/tree.h"
  #include "freeling/morfo/traces.h"
+ #include "freeling/morfo/summarizer.h"
  using namespace std;
 %}
 
