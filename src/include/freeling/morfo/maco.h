@@ -81,11 +81,17 @@ namespace freeling {
                             bool dic, bool aff, bool comp, bool rtk,
                             bool mw, bool ner, bool qt, bool prb);
 
+    const dictionary& get_dictionary() {
+      return (*dico);
+    }
+
     /// analyze given sentence
     void analyze(sentence &) const;
 
     /// inherit other methods
     using processor::analyze;
+
+
   };
 
 } // namespace

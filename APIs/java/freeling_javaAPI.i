@@ -40,6 +40,8 @@
  #include "freeling/tree.h"
  #include "freeling/morfo/traces.h"
  #include "freeling/morfo/summarizer.h"
+ #include "freeling/morfo/senses.h"
+ #include "freeling/morfo/semdb.h"
  using namespace std;
 %}
 

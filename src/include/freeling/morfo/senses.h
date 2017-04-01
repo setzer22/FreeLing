@@ -61,6 +61,10 @@ namespace freeling {
 
     /// inherit other methods
     using processor::analyze;
+
+    const semanticDB& get_semanticDB() {
+      return (*semdb);
+    }
   };
 
 } // namespace

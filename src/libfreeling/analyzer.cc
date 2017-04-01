@@ -122,7 +122,7 @@ analyzer::analyzer(const config_options &cfg) {
     mopt.set_threshold (cfg.MACO_ProbabilityThreshold);
     // Whether the dictionary offers inverse acces (lemma#pos -> form). 
     // Only needed if your application is going to do such an access.
-    mopt.set_inverse_dict(false);
+    mopt.set_inverse_dict(true);
 
     // Data files for morphological submodules. by default set to ""
     // Only files for active modules have to be specified 

@@ -29,7 +29,7 @@
 #ifndef _ANALYZER
 #define _ANALYZER
 
-#include <iostream> 
+#include <iostream>
 #include <list>
 
 #include "freeling.h"
@@ -174,6 +174,7 @@ class WINDLL analyzer {
    relaxcor *corfc;
    semgraph_extract *sge;
 
+
    // store configuration options
    //   config *cfg;
    analyzer_invoke_options current_invoke_options;
@@ -217,6 +218,11 @@ class WINDLL analyzer {
   /// Analyze text as a partial document. Retain incomplete sentences in buffer   
    /// in case next call completes them (except if flush==true)
    void analyze(const std::wstring &text, std::list<sentence> &ls, bool flush=false);
+
+
+   /// Returns the senses inner module. Cannot be modified
+   const senses& get_senses() { return (*sens); }
+   const maco& get_maco() { return (*morfo); }
 
    // for python API
    std::list<sentence> analyze(const std::wstring &text, bool flush=false) ;

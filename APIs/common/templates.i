@@ -55,3 +55,4 @@
 %template(PairStringInt) std::pair<std::wstring,int>;
 %template(PairStringDouble) std::pair<std::wstring,double>;
 %template(ListPairStringDouble) std::list<std::pair<std::wstring,double> >;
+%template(ListPairStringString) std::list<std::pair<std::wstring,std::wstring> >;

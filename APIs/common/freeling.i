@@ -1225,6 +1225,10 @@ class analyzer {
 
    ~analyzer();
 
+   /// Returns the senses inner module. Cannot be modified
+   const freeling::senses& get_senses();
+   const freeling::maco& get_maco();
+
    /// analyze further levels on a partially analyzed document
    void analyze(document &doc) const;
    /// analyze further levels on partially analyzed sentences
@@ -1388,6 +1392,8 @@ class maco {
      void set_active_options(bool umap, bool num, bool pun, bool dat,
                              bool dic, bool aff, bool comp, bool rtk,
                              bool mw, bool ner, bool qt, bool prb);
+
+     const freeling::dictionary& get_dictionary();
 
      #ifndef FL_API_JAVA
      /// analyze sentence
@@ -1899,7 +1905,9 @@ class senses {
   senses(const std::wstring &); 
   /// Destructor
   ~senses(); 
-  
+
+  const freeling::semanticDB& get_semanticDB();
+
   #ifndef FL_API_JAVA
   /// analyze sentence
   sentence analyze(const sentence &) const;
